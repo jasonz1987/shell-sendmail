@@ -7,6 +7,12 @@
 # Copyright: AnAn Studio (http://www.anan-studio.com)
 # We use mime protocel,you can get more info from http://en.wikipedia.org/wiki/MIME
 
+ret=$(which sendmail)
+
+if [ "$ret" == "" ];then
+	yum -y install sendmail
+fi 
+
 # set the encode of your mail 
 encode="UTF-8" 
 
@@ -20,8 +26,8 @@ function base64_string()
 	fi
 }
 
-from=$(base64_string "sender@example.com" "B")
-to=$(base64_string "recipet@example.com" "B")
+from=$(base64_string "sender title" "B")
+to="recipient1@example.com,recipient2@example.com"
 subject=$(base64_string "Your Email Title" "B")
 boundary="_Part_189_619193260.1384275896069"
 body="Your Content Of Email Body"
