@@ -4,7 +4,7 @@
 # Author:by Jason.z
 # Mail:ccnuzxg@gmail.com
 # Date:2014-03-31
-# Copyright: AnAn Studio (http://www.anan-studio.com)
+# Copyright: Jasonz (http://www.jason-z.com)
 # We use mime protocel,you can get more info from http://en.wikipedia.org/wiki/MIME
 
 ret=$(which sendmail)
